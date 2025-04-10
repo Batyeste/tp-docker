@@ -4,10 +4,12 @@ Dans un premier temps j'ai créé 2 dossiers : 'Frontend' et 'Backend".
 ## Backend
 J'ai créé une api qui permet de récupérer parmit 3 citations, une citation aléatoire.
 J'ai ensuite créé un fichier Dockerfile pour pouvoir construire l'image et
+
 Je l'ai ensuite construit avec la commande : `docker build -t backend .`
+
 Et lancé avec la commande : `docker run -d -p 5000:5000 backend backend`.
 
-En allant sur localhost:5000/api/citation je retrouve alors mes citations de manière aléatoire.
+En allant sur `localhost:5000/api/citation` je retrouve alors mes citations de manière aléatoire.
 
 ## Frontend
 J'ai créé un front qui fait un appelle a l'api du back pour afficher une citation aléaatoire.
@@ -17,7 +19,7 @@ Je l'ai ensuite construit avec la commande : `docker build -t frontend .`
 
 Et lancé avec la commande : `docker run -d -p 3000:3000 frontend frontend`.
 
-En allant sur localhost:3000 je retrouve alors mes citations qui s'affiche de manière aléatoire.
+En allant sur `localhost:3000` je retrouve alors mes citations qui s'affiche de manière aléatoire.
 
 Une fois que ça marche correctement localement, on peut se permettre d'arrêter et/ou de supprimer les images et container.
 
@@ -38,7 +40,7 @@ Une fois la configuration terminé, lancé les commandes suivante :
 `docker push <repo/nomimg>`
 
 # De votre côté
-Pour que vous puissiez récupérer, vous devez créer un fichier `docker-compsoe.yml` qui récupère les images.
+Pour que vous puissiez récupérer, vous devez créer un fichier `docker-compose.yml` qui récupère les images.
 
 Même si vous ne les avez pas localement, il va les rechercher sur Docker Hub. 
 
@@ -57,7 +59,7 @@ alors que le docker-compose.yml sert à orchestrer plusieurs conteneurs.</span>
 
 3. En quoi Docker Compose facilite-t-il le travail en équipe et le déploiement ?
 
-[color=#26B260]Docker Compose permet à tous les membres de l’équipe de déployer un projet avec une seule commande tout en ayant la même config.[/color]
+<span style="color:green">Docker Compose permet à tous les membres de l’équipe de déployer un projet avec une seule commande tout en ayant la même config.</span>
 
 4. Pourquoi est-il utile de publier une image sur Docker Hub même pour un projet perso ?
 
